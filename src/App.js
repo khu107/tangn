@@ -1,9 +1,15 @@
 import './App.css';
+import Moviebody from './Moviebody';
+
+import { Navbar } from './Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>salom</h1>
+      <div>
+        <Navbar />
+      </div>
+      <Moviebody />
     </div>
   );
 }
