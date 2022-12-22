@@ -7,8 +7,8 @@ function Moviebody() {
   const [movie, setMovie] = useContext(MovieContext);
   return (
     <Wrapper>
-      {movie.map((v) => {
-        return <Card {...v} />;
+      {movie.map((v, i) => {
+        return <Card key={i} {...v} />;
       })}
     </Wrapper>
   );
