@@ -3,8 +3,9 @@ import Card from '../Card';
 import { MovieContext } from '../context/MovieContext';
 import { Wrapper } from './style';
 
-function Moviebody() {
+function Moviebody(props) {
   const [movie, setMovie] = useContext(MovieContext);
+
   return (
     <Wrapper>
       {movie.map((v, i) => {
