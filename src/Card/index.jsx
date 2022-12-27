@@ -6,10 +6,10 @@ function Card({ name, id, published, author, rasm }) {
   const [movie, setMovie] = useContext(MovieContext);
   const [show, setShow] = useState(false);
   const [data, setData] = useState({
-    name: name,
-    published: published,
-    author: author,
-    rasm: rasm,
+    name: "",
+    published: "",
+    author: "",
+    rasm: "",
   });
 
   return (
@@ -92,7 +92,10 @@ function Card({ name, id, published, author, rasm }) {
               save
             </Btn>
           ) : (
-            <Btn onClick={() => setShow(true)}>edit</Btn>
+            <Btn onClick={() => {
+          setShow(true)
+            setData({name, published,author, rasm, id})
+          }}>edit</Btn>
           )}
 
           <Btn
